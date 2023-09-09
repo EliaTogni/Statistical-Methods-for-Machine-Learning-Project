@@ -1,3 +1,22 @@
 1) Should I merge the initial train set and test set? Imho yes, I should.
 2) What are the differences between RGB and Grayscale? (https://www.cs.cmu.edu/~mmv/papers/06icra-juan.pdf)
+3) It is useful to enlarge the images before inputting into neural networks? (https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0263-7)
+4) What kind of neural network should I use? There are several neural network architectures commonly used for binary image classification tasks, and your choice will depend on the complexity of your data and the specific requirements of your problem. Here are some popular options:
+
+	- 1 **Convolutional Neural Network (CNN):** CNNs are the most commonly used architecture for image classification tasks. They are designed to automatically learn hierarchical features from images. You can start with a relatively simple CNN architecture and then experiment with more complex architectures if needed. Common CNN architectures include LeNet, VGG, ResNet, and Inception.
+
+	- 2 **Transfer Learning:** You can use a pre-trained CNN model (e.g., VGG16, ResNet, Inception, or MobileNet) as a feature extractor and then add a few fully connected layers on top for binary classification. This approach is useful when you have a small dataset because it leverages the knowledge learned from large-scale datasets like ImageNet.
+
+	- 3. **Siamese Networks:** Siamese networks are used for tasks like face recognition and one-shot learning. They take two input images and learn to measure their similarity. This can be adapted for binary classification by comparing one input image with a reference image representing one class and making a decision based on the similarity score.
+
+	- 4. **Autoencoders:** Autoencoders can be used for anomaly detection or binary classification by reconstructing input images. If an input image cannot be reconstructed well, it can be classified as belonging to a different class. Variational Autoencoders (VAEs) are a specific type of autoencoder that is often used for image generation and anomaly detection.
+
+	- 5. **Fully Connected Neural Network:** For very simple image classification tasks, you can use a feedforward neural network (also known as a multi-layer perceptron) with fully connected layers. However, this approach may not work well for complex image data with spatial relationships.
+
+	- 6. **Recurrent Neural Networks (RNN):** RNNs are typically used for sequential data, but they can also be used for image classification when the order of processing matters. For example, if you have a sequence of images and want to classify based on their temporal order, you can use RNNs.
+
+The choice of neural network architecture should be based on the nature of the dataset, the size of the dataset, and the computational resources available. It's often a good idea to start with a simple architecture and gradually increase complexity if needed, while monitoring the performance on a validation dataset to avoid overfitting. Additionally, consider data augmentation and regularization techniques to improve the generalization of your model.
+
+5) How should I set hyperparametres? (https://jmlr.org/papers/volume18/16-558/16-558.pdf)
+6)
 
